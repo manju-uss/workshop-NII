@@ -1,0 +1,200 @@
+1.# Sum 2 and 3 using the + operator. [Difficulty: Beginner]
+a = 3
+b = 2
+c = a + b
+c
+
+2.#Take the square root of 36, use sqrt(). [Difficulty: Beginner]
+sqrt(36)
+
+3.#Take the log10 of 1000, use function log10(). [Difficulty: Beginner]
+log10(1000)
+
+4.#Take the log2 of 32, use function log2(). [Difficulty: Beginner]
+log2(32)
+
+5.#Assign the sum of 2,3 and 4 to variable x. [Difficulty: Beginner]
+x <- 2+3+4
+x
+x <- sum(c(2,3,4))
+x
+
+6.#Find the absolute value of the expression 5 - 145 using the abs() function. [Difficulty: Beginner]
+abs(5-145)
+
+7. #Calculate the square root of 625, divide it by 5, and assign it to variable x.Ex: y= log10(1000)/5, the previous statement takes log10 of 1000, divides it by 5, and assigns the value to variable y. [Difficulty: Beginner]
+a <- sqrt(625)
+a
+x <- a/5
+x
+x <- sqrt(625) / 5
+x
+
+8. #Multiply the value you get from previous exercise by 10000, assign it to variable x Ex: y=y*5, multiplies y by 5 and assigns the value to y. KEY CONCEPT: results of computations or arbitrary values can be stored in variables we can re-use those variables later on and over-write them with new values. [Difficulty: Beginner]
+x <- x*10000
+x
+
+9.#Make a vector of 1,2,3,5 and 10 using c(), and assign it to the vec variable. Ex: vec1=c(1,3,4) makes a vector out of 1,3,4. [Difficulty: Beginner]
+vec <- c(1,2,3,5,10)
+vec
+
+10.#Check the length of your vector with length(). Ex: length(vec1) should return 3. [Difficulty: Beginner]
+length(vec)
+
+11.#Make a vector of all numbers between 2 and 15. Ex: vec=1:6 makes a vector of numbers between 1 and 6, and assigns it to the vec variable. [Difficulty: Beginner]
+vec <- c(2:15)
+vec
+length(vec)
+
+12.#Make a vector of 4s repeated 10 times using the rep() function. Ex: rep(x=2,times=5) makes a vector of 2s repeated 5 times. [Difficulty: Beginner]
+rep(x=4,times=10)
+rep(x=c(2,4,5),times=2)
+rep(x=c(2,4,5),times=2, each = 2)
+rep(x=c(2,4,5),each = 2)
+
+13.#Make a logical vector with TRUE, FALSE values of length 4, use c(). Ex: c(TRUE,FALSE). [Difficulty: Beginner]
+c(TRUE,FALSE,FALSE,TRUE)
+
+14.#Make a character vector of the gene names PAX6,ZIC2,OCT4 and SOX2. Ex: avec=c("a","b","c") makes a character vector of a,b and c. [Difficulty: Beginner]
+gene_names = c("PAX6","ZIC2","OCT4","SOX2")
+gene_names
+is.character(gene_names)
+
+15.#Subset the vector using [] notation, and get the 5th and 6th elements. Ex: vec1[1] gets the first element. vec1[c(1,3)] gets the 1st and 3rd elements. [Difficulty: Beginner]
+vec
+vec[c(5,6)]
+
+16.#You can also subset any vector using a logical vector in []. Run the following:
+myvec=1:5
+# the length of the logical vector
+# should be equal to length(myvec)
+myvec[c(TRUE,TRUE,FALSE,FALSE,FALSE)]
+myvec[c(TRUE,FALSE,FALSE,FALSE,TRUE)]
+
+17.#==,>,<, >=, <= operators create logical vectors. See the results of the following operations: [Difficulty: Beginner]
+myvec > 3
+myvec == 4
+myvec <= 2
+myvec != 4
+myvec
+vec
+vec >5 & vec<8
+
+18.#Use the > operator in myvec[ ] to get elements larger than 2 in myvec which is described above. [Difficulty: Beginner]
+myvec[]
+myvec > 2
+myvec [myvec > 2]
+
+19.#Make a 5x3 matrix (5 rows, 3 columns) using matrix(). Ex: matrix(1:6,nrow=3,ncol=2) makes a 3x2 matrix using numbers between 1 and 6. [Difficulty: Beginner]
+m <- matrix(1:15,nrow = 5,ncol = 3)
+m
+m <- matrix(1:6,nrow=3,ncol = 2)
+m
+
+20.#What happens when you use byrow = TRUE in your matrix() as an additional argument? Ex: mat=matrix(1:6,nrow=3,ncol=2,byrow = TRUE). [Difficulty: Beginner]
+mat = matrix(1:15,nrow = 5,ncol = 3, byrow = TRUE)
+mat
+
+21.#Extract the first 3 columns and first 3 rows of your matrix using [] notation. [Difficulty: Beginner]
+mat[c(1,2,3)   ,  c(1,2,3)]
+
+22.#Extract the last two rows of the matrix you created earlier. Ex: mat[2:3,] or mat[c(2,3),] extracts the 2nd and 3rd rows. [Difficulty: Beginner]
+mat[4:5,]
+mat[2:3,]
+
+23.#Extract the first two columns and run class() on the result. [Difficulty: Beginner]
+mat[,1:2]
+m <- mat[,1:2]
+class(m)
+
+24.#Extract the first column and run class() on the result, compare with the above exercise. [Difficulty: Beginner]
+m <- mat[,1]
+class(m)
+m
+class (mat[,1])
+
+25.#Make a data frame with 3 columns and 5 rows. Make sure first column is a sequence of numbers 1:5, and second column is a character vector. Ex: df=data.frame(col1=1:3,col2=c("a","b","c"),col3=3:1) # 3x3 data frame. Remember you need to make a 3x5 data frame. [Difficulty: Beginner]
+m = matrix(1:15, nrow = 5 , ncol = 3)
+m
+as.data.frame(m)
+data.frame(col1=1:5, col2=1:5, col3 =1:5 )
+df <- data.frame(col1=1:5, col2=1:5, col3 =1:5 )
+df
+
+26.#Extract the first two columns and first two rows. HINT: Use the same notation as matrices. [Difficulty: Beginner]
+df[1:2,1:2]
+
+27.#Extract the last two rows of the data frame you made. HINT: Same notation as matrices. [Difficulty: Beginner]
+df[4,5,]
+df[c(4,5),]
+
+28.#Extract the last two columns using the column names of the data frame you made. [Difficulty: Beginner]
+df[,c(2,3)]
+df[,c('col2','col3')]
+
+29.#Extract the second column using the column names. You can use [] or $ as in lists; use both in two different answers. [Difficulty: Beginner]
+df[,df]
+df[,]
+df[,col2]
+df[,'col2']
+df$col2
+
+30.#Extract rows where the 1st column is larger than 3. HINT: You can get a logical vector using the > operator , and logical vectors can be used in [] when subsetting. [Difficulty: Beginner]
+df
+df[  df$col1 > 3
+,  ]
+df[  df$col1 > 3 ,  ]
+df
+df[  df$col1 == 3 ,  ]
+df[,df$col1 == 4]
+df[df$col1 == 4, ]
+
+31.#Extract rows where the 1st column is larger than or equal to 3. [Difficulty: Beginner]
+df[df$col1>=3,]
+
+32.#Convert a data frame to the matrix. HINT: Use as.matrix(). Observe what happens to numeric values in the data frame. [Difficulty: Beginner]
+as.matrix(df)
+
+33.#Make a list using the list() function. Your list should have 4 elements; the one below has 2. Ex: mylist= list(a=c(1,2,3),b=c("apple,"orange")) [Difficulty: Beginner]
+l = list(a=c(1,2,3),b=c("apple","orange"))
+l
+l = list(a=c(1,2,3,4),b=c("apple","orange"))
+l
+
+34.#Select the 1st element of the list you made using $ notation. Ex: mylist$a selects first element named “a”. [Difficulty: Beginner]
+l$a
+l$b
+
+35.#Select the 4th element of the list you made earlier using $ notation. [Difficulty: Beginner]
+l = list(a=c(1,2,3,4),b=c("apple","orange"), x=c(10,20,30), y=c("aa","bb"))
+l
+l[[4]]
+l$d
+l$y
+
+36.#Select the 1st element of your list using [ ] notation. Ex: mylist[1] selects the first element named “a”, and you get a list with one element. mylist["a"] selects the first element named “a”, and you get a list with one element. [Difficulty: Beginner]
+l[1]
+l[[1]]
+
+37.#Select the 4th element of your list using [ ] notation. [Difficulty: Beginner]
+l[[4]]
+l[4]
+l[[4]]
+l[4]
+l[4]$y
+
+38.#Make a factor using factor(), with 5 elements. Ex: fa=factor(c("a","a","b")). [Difficulty: Beginner]
+fa=factor(c("a","a","b"))
+fa
+fa=factor(c("a","a","b",'d','d'))
+fa
+
+39.#Convert a character vector to a factor using as.factor(). First, make a character vector using c() then use as.factor(). [Difficulty: Intermediate]
+ls()
+is.character(gene_names)
+gene_names
+as.factor(gene_names)
+
+40.#Convert the factor you made above to a character using as.character(). [Difficulty: Beginner]
+as.character(fa)
+
